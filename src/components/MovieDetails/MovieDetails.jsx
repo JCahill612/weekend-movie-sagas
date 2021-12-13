@@ -8,12 +8,11 @@ function MovieDetails () {
 
     return (
         <>
-            <h1>Movies Details</h1>
-
             <div>
-                <p>{selectedMovie[0]?.title}</p>
-                <p>{selectedMovie[0]?.description}</p>
+                <h1>{selectedMovie[0]?.title}</h1>
                 <img src={selectedMovie[0]?.poster} alt={selectedMovie[0]?.title}/>
+                <p>{selectedMovie[0]?.description}</p>
+                
             </div>
 
             {/* <ul>

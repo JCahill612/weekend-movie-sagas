@@ -16,6 +16,7 @@ function MovieList() {
     return (
         <main>
             <h1>MovieList</h1>
+            <button onClick={()=>{navigate("/add")}}>Add a movie</button>
             <section className="movies">
                 {movies.map(movie => {
                     return (
@@ -26,7 +27,7 @@ function MovieList() {
                     );
                 })}
             </section>
-            <button onClick={()=>{navigate("/add")}}>Add a movie</button>
+            
         </main>
 
     );

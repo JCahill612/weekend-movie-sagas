@@ -1,27 +1,23 @@
-import {HashRouter as Router, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './App.css';
+import {useNavigate} from 'react-router-dom'
 import MovieList from '../MovieList/MovieList'
-import MovieDetails from '../MovieDetails/MovieDetails'
-import MovieForm from '../MovieForm/MovieForm'
+import MovieDetail from '../MovieDetail/MovieDetail'
+import AddMovie from '../AddMovie/AddMovie'
+
+
 
 function App() {
+
   return (
     <div className="App">
       <h1>The Movies Saga!</h1>
-      <Router> 
-
-        <Route path="/" exact>
-          <MovieList />
-        </Route>
-        
-        <Route path="/details">
-          <MovieDetails />
-        </Route>
-
-        <Route path="/add">
-          <MovieForm />
-        </Route>
-
+        <Router>
+          <Routes>
+            <Route path="/" element={<MovieList />}/>
+            <Route path="/details/:id" element={<MovieDetail />}/>
+            <Route path="/add" element={<AddMovie />}/>
+          </Routes>
       </Router>
     </div>
   );
